@@ -1,0 +1,1 @@
+# vite-error-monitor-demo

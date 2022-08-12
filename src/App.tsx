@@ -6,6 +6,8 @@ import Title from './components/title'
 import AsyncError from './components/Errors/AsyncError'
 import PromiseError from './components/Errors/PromiseError'
 import SyncError from './components/Errors/SyncError'
+import { Divider } from 'antd'
+import AppRoutes from './routes'
 // 错误边界组件
 
 // 错误边界只能使用class方式创建组件
@@ -75,11 +77,13 @@ function App() {
       </p>
       <ErrorBoundary fallbackRender={() => <p>error</p>}>
         <Title title="正常的组件" />
+        <Divider />
         <List />
         <AsyncError />
         <SyncError />
         <PromiseError />
       </ErrorBoundary>
+        <AppRoutes />
     </div>
   )
 }
